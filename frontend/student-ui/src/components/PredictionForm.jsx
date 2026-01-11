@@ -31,7 +31,7 @@ export default function PredictionForm() {
   const handlePredict = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict", {
+      const res = await axios.post("https://student-performance-2-3xl8.onrender.com/predict", {
         math_score: Number(math),
         reading_score: Number(reading),
         writing_score: Number(writing)
