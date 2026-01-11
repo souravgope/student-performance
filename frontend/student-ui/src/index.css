@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  background: #020617; /* deep dark blue */
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* DARK AURORA BACKGROUND */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background::before,
+.background::after,
+.background span {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.65;
+}
+
+.background::before {
+  background: #38bdf8; /* cyan */
+  top: -120px;
+  left: -120px;
+}
+
+.background::after {
+  background: #a78bfa; /* violet */
+  bottom: -140px;
+  right: -140px;
+}
+
+.background span {
+  background: #22c55e; /* green */
+  top: 40%;
+  left: 60%;
+}
