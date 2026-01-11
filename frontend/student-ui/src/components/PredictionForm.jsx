@@ -165,42 +165,45 @@ export default function PredictionForm() {
                     <Typography variant="body2" mb={1}>
                       Confidence Level
                     </Typography>
-                    <LinearProgress
-                      variant="determinate"
-                      value={confidence}
-                      sx={{
-                        height: 10,
-                        borderRadius: 5,
-                        mb: 3
-                      }}
-                    />
+                   <LinearProgress
+  variant="determinate"
+  value={confidence}
+  sx={{
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: "#1e293b",
+    "& .MuiLinearProgress-bar": {
+      background:
+        "linear-gradient(135deg,#38bdf8,#a78bfa)"
+    }
+  }}
+/>
+
 
                     <Typography variant="body2" mb={2}>
                       Model confidence indicates probability of passing
                       based on historical student performance.
                     </Typography>
                   </>
-                )}  
+                )}
 
                 <ResponsiveContainer width="100%" height={250}>
                   <BarChart data={chartData}>
-                   <defs>
+                    <XAxis dataKey="subject" />
+                    <YAxis />
+                    <Tooltip />
+                    <defs>
   <linearGradient id="scoreGradient" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0%" stopColor="#38bdf8" />
     <stop offset="100%" stopColor="#a78bfa" />
   </linearGradient>
 </defs>
 
-                    <XAxis dataKey="subject" />
-                    <YAxis />
-                    <Tooltip />
-                 <Bar
+                    <Bar
   dataKey="score"
   fill="url(#scoreGradient)"
   radius={[6, 6, 0, 0]}
 />
-
-
 
                   </BarChart>
                 </ResponsiveContainer>
