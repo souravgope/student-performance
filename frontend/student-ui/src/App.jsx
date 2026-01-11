@@ -1,7 +1,5 @@
-import PredictionForm from "./components/PredictionForm";
-
 function App() {
-  return <PredictionForm />;
+  return <div style={{padding:20}}>Hello — React is rendering.</div>;
 }
 
 export default App;
