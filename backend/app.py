@@ -9,6 +9,7 @@ app = Flask(__name__)
 # Enable CORS
 CORS(app)
 
+
 @app.route("/", methods=["GET"])
 def home():
     return "Student Performance Prediction API is running"
